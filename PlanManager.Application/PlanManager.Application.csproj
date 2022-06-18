@@ -7,4 +7,11 @@
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Commands" />
+      <Folder Include="DTOs" />
+      <Folder Include="Queries" />
+      <Folder Include="Validators" />
+    </ItemGroup>
+
 </Project>

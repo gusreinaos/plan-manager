@@ -7,4 +7,12 @@
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="DTOs" />
+      <Folder Include="Entities" />
+      <Folder Include="Events\Domain" />
+      <Folder Include="Interfaces" />
+      <Folder Include="Services" />
+    </ItemGroup>
+
 </Project>

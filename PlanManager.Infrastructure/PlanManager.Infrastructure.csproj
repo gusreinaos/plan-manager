@@ -7,4 +7,10 @@
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="EntityConfigurations" />
+      <Folder Include="Migrations" />
+      <Folder Include="Repositories" />
+    </ItemGroup>
+
 </Project>
