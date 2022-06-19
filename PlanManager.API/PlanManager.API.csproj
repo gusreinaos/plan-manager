@@ -8,11 +8,16 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Autofac" Version="6.4.0" />
+        <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+        <PackageReference Include="MediatR" Version="10.0.1" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Configurations" />
+      <ProjectReference Include="..\PlanManager.Application\PlanManager.Application.csproj" />
+      <ProjectReference Include="..\PlanManager.Domain\PlanManager.Domain.csproj" />
+      <ProjectReference Include="..\PlanManager.Infrastructure\PlanManager.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

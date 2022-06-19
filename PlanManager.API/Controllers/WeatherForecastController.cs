@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using PlanManager.Domain.Interfaces;
 
 namespace PlanManager.API.Controllers;
 
@@ -13,9 +14,11 @@ public class WeatherForecastController : ControllerBase
 
     private readonly ILogger<WeatherForecastController> _logger;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    private IUserRepository _userRepository;
+    public WeatherForecastController(ILogger<WeatherForecastController> logger, IUserRepository userRepository)
     {
         _logger = logger;
+        _userRepository = userRepository;
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
@@ -25,7 +28,7 @@ public class WeatherForecastController : ControllerBase
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+                Summary = _userRepository.GetUser()
             })
             .ToArray();
     }

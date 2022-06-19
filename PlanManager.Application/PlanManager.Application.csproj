@@ -5,6 +5,7 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <OutputType>Library</OutputType>
     </PropertyGroup>
 
     <ItemGroup>
@@ -12,6 +13,10 @@
       <Folder Include="DTOs" />
       <Folder Include="Queries" />
       <Folder Include="Validators" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\PlanManager.Domain\PlanManager.Domain.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "+DwIDxcAKBux/mgCKY1aR+6LDnf37Q3k6IJabmcgJo4=",
+  "Source": "PlanManager.Application",
+  "BasePath": "_content/PlanManager.Application",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Domain/PlanManager.Domain.csproj",
+      "Version": 2,
+      "Source": "PlanManager.Domain",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

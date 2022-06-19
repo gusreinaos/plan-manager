@@ -5,12 +5,17 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <OutputType>Library</OutputType>
     </PropertyGroup>
 
     <ItemGroup>
       <Folder Include="EntityConfigurations" />
       <Folder Include="Migrations" />
-      <Folder Include="Repositories" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\PlanManager.Application\PlanManager.Application.csproj" />
+      <ProjectReference Include="..\PlanManager.Domain\PlanManager.Domain.csproj" />
     </ItemGroup>
 
 </Project>

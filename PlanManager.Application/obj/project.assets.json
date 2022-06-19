@@ -1,11 +1,33 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "PlanManager.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/PlanManager.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PlanManager.Domain.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "PlanManager.Domain/1.0.0": {
+      "type": "project",
+      "path": "../PlanManager.Domain/PlanManager.Domain.csproj",
+      "msbuildProject": "../PlanManager.Domain/PlanManager.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "PlanManager.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/Users/oscarreinagustafsson/.nuget/packages/": {}
@@ -31,7 +53,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Domain/PlanManager.Domain.csproj": {
+              "projectPath": "/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Domain/PlanManager.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

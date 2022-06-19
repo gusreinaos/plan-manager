@@ -1,0 +1,15 @@
+/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Domain/obj/Debug/net6.0/PlanManager.Domain.csproj.AssemblyReference.cache
+/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Domain/obj/Debug/net6.0/PlanManager.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Domain/obj/Debug/net6.0/PlanManager.Domain.AssemblyInfoInputs.cache
+/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Domain/obj/Debug/net6.0/PlanManager.Domain.AssemblyInfo.cs
+/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Domain/obj/Debug/net6.0/PlanManager.Domain.csproj.CoreCompileInputs.cache
+/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Domain/bin/Debug/net6.0/PlanManager.Domain.deps.json
+/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Domain/bin/Debug/net6.0/PlanManager.Domain.dll
+/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Domain/bin/Debug/net6.0/PlanManager.Domain.pdb
+/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Domain/obj/Debug/net6.0/staticwebassets.build.json
+/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Domain/obj/Debug/net6.0/staticwebassets.development.json
+/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Domain/obj/Debug/net6.0/scopedcss/bundle/PlanManager.Domain.styles.css
+/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Domain/obj/Debug/net6.0/PlanManager.Domain.dll
+/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Domain/obj/Debug/net6.0/refint/PlanManager.Domain.dll
+/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Domain/obj/Debug/net6.0/PlanManager.Domain.pdb
+/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Domain/obj/Debug/net6.0/ref/PlanManager.Domain.dll

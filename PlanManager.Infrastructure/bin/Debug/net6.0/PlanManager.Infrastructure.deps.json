@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "PlanManager.Infrastructure/1.0.0": {
+        "dependencies": {
+          "PlanManager.Application": "1.0.0",
+          "PlanManager.Domain": "1.0.0"
+        },
+        "runtime": {
+          "PlanManager.Infrastructure.dll": {}
+        }
+      },
+      "PlanManager.Application/1.0.0": {
+        "dependencies": {
+          "PlanManager.Domain": "1.0.0"
+        },
+        "runtime": {
+          "PlanManager.Application.dll": {}
+        }
+      },
+      "PlanManager.Domain/1.0.0": {
+        "runtime": {
+          "PlanManager.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PlanManager.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PlanManager.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PlanManager.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

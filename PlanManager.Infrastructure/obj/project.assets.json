@@ -1,11 +1,55 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "PlanManager.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "PlanManager.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PlanManager.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PlanManager.Application.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "PlanManager.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/PlanManager.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PlanManager.Domain.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "PlanManager.Application/1.0.0": {
+      "type": "project",
+      "path": "../PlanManager.Application/PlanManager.Application.csproj",
+      "msbuildProject": "../PlanManager.Application/PlanManager.Application.csproj"
+    },
+    "PlanManager.Domain/1.0.0": {
+      "type": "project",
+      "path": "../PlanManager.Domain/PlanManager.Domain.csproj",
+      "msbuildProject": "../PlanManager.Domain/PlanManager.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "PlanManager.Application >= 1.0.0",
+      "PlanManager.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/Users/oscarreinagustafsson/.nuget/packages/": {}
@@ -31,7 +75,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Application/PlanManager.Application.csproj": {
+              "projectPath": "/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Application/PlanManager.Application.csproj"
+            },
+            "/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Domain/PlanManager.Domain.csproj": {
+              "projectPath": "/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Domain/PlanManager.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
