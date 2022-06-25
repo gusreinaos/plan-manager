@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ynWA5yYtOIB8BN+PUhvkhzhfoPEFg08WMlnCsikuMoRnPHx6+l7HBxhMnwJFKzrulwir8wOoy+zitukNO+GhGQ==",
+  "dgSpecHash": "rj09+Gx3U+TyEILH0QgjjaXe0BZVTvNIa0wqqrkOKAxleuPJPDohQ4LJpOFXoQmqKxi/CuK492OE52HgSlJzIg==",
   "success": true,
   "projectFilePath": "/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Application/PlanManager.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/oscarreinagustafsson/.nuget/packages/mediatr/10.0.1/mediatr.10.0.1.nupkg.sha512",
+    "/Users/oscarreinagustafsson/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
+    "/Users/oscarreinagustafsson/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/10.0.1/mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
+    "/Users/oscarreinagustafsson/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

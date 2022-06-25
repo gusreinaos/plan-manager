@@ -35,3 +35,4 @@
 /Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.API/bin/Debug/net6.0/PlanManager.Application.pdb
 /Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.API/bin/Debug/net6.0/PlanManager.Domain.pdb
 /Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.API/bin/Debug/net6.0/PlanManager.Infrastructure.pdb
+/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.API/bin/Debug/net6.0/MediatR.Extensions.Microsoft.DependencyInjection.dll

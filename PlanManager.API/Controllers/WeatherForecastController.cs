@@ -1,4 +1,6 @@
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using PlanManager.Application.Commands.PlanCommands;
 using PlanManager.Domain.Interfaces;
 
 namespace PlanManager.API.Controllers;
@@ -14,21 +16,23 @@ public class WeatherForecastController : ControllerBase
 
     private readonly ILogger<WeatherForecastController> _logger;
 
-    private IUserRepository _userRepository;
-    public WeatherForecastController(ILogger<WeatherForecastController> logger, IUserRepository userRepository)
+    private IMediator _mediator;
+    public WeatherForecastController(ILogger<WeatherForecastController> logger, IMediator mediator)
     {
         _logger = logger;
-        _userRepository = userRepository;
+        _mediator = mediator;
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+    public async Task<IEnumerable<WeatherForecast>> Get()
     {
+        var plan = await _mediator.Send(new CreatePlanCommand("oscar2"));
+        
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = _userRepository.GetUser()
+                Summary = plan.Name
             })
             .ToArray();
     }

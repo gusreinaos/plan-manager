@@ -9,7 +9,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Commands" />
       <Folder Include="DTOs" />
       <Folder Include="Queries" />
       <Folder Include="Validators" />
@@ -17,6 +16,11 @@
 
     <ItemGroup>
       <ProjectReference Include="..\PlanManager.Domain\PlanManager.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR" Version="10.0.1" />
+      <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
     </ItemGroup>
 
 </Project>

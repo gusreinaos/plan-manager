@@ -9,13 +9,16 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="EntityConfigurations" />
       <Folder Include="Migrations" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\PlanManager.Application\PlanManager.Application.csproj" />
       <ProjectReference Include="..\PlanManager.Domain\PlanManager.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.5" />
     </ItemGroup>
 
 </Project>
