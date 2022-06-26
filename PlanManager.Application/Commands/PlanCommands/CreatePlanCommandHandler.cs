@@ -16,7 +16,7 @@ public class CreatePlanCommandHandler : IRequestHandler<CreatePlanCommand, Plan>
 
     public async Task<Plan> Handle(CreatePlanCommand request, CancellationToken cancellationToken)
     {
-        var user = _userRepository.GetUser();
-        return new Plan(user + " " + request.Name);
+        var plan = _userRepository.GetUserById(Guid.Parse("aaf81b9a-0689-4d76-a61a-1660b490a2a0"));
+        return new Plan(plan.Name + " " + request.Name);
     }
 }

@@ -12,4 +12,8 @@ public class PlanManagerDbContext : DbContext
     {
         modelBuilder.ApplyConfiguration(new PlanConfig());
     }
+    
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        => optionsBuilder.UseNpgsql("Host=localhost;Port=5433;Database=plan_manager;Username=postgres;Password=toor");
+    
 }

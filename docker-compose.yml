@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  adminer:
+    image: adminer
+    restart: unless-stopped
+    ports:
+      - 8009:8080
+  
+  db:
+    image: postgres:13.4
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: toor
+    ports:
+      - 127.0.0.1:5433:5432
