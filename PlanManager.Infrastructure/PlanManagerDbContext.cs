@@ -11,6 +11,7 @@ public class PlanManagerDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new PlanConfig());
+        modelBuilder.ApplyConfiguration(new UserConfig());
     }
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

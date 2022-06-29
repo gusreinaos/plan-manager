@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using PlanManager.Infrastructure;
@@ -11,9 +12,10 @@ using PlanManager.Infrastructure;
 namespace PlanManager.Infrastructure.Migrations
 {
     [DbContext(typeof(PlanManagerDbContext))]
-    partial class PlanManagerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220629132649_UserMigration")]
+    partial class UserMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -45,29 +47,6 @@ namespace PlanManager.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("plans", (string)null);
-                });
-
-            modelBuilder.Entity("PlanManager.Domain.Entities.User", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("users", (string)null);
                 });
 #pragma warning restore 612, 618
         }
