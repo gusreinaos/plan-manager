@@ -1,3 +1,6 @@
+using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
+
 namespace PlanManager.Domain.Entities;
 
 public class User
@@ -9,13 +12,17 @@ public class User
         Email = email;
         Password = password;
     }
-
+    
     public Guid Id { get; set; }
     public string FullName { get; set; }
     public string Email { get; set; }
     public string Password { get; set; }
-    //public List<Plan> CreatedPlansIds { get; set; }
-    //public List<Plan> AttendingPlansIds { get; set; }
     
-    
+    //Navigation Properties
+
+    public List<Plan> Plans { get; set; }
+    public List<UserAttendsPlan> UserAttendsPlans { get; set; }
+
+
+
 }

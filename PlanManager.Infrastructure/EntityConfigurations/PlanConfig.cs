@@ -9,13 +9,12 @@ public class PlanConfig : IEntityTypeConfiguration<Plan>
     public void Configure(EntityTypeBuilder<Plan> builder)
     {
         builder.ToTable("plans");
-        builder.Property(t => t.Id);
-        builder.HasKey(t => t.Id); //primary key for plan
-        builder.Property(t => t.Name);
-        builder.Property(t => t.Latitude);
-        builder.Property(t => t.Longitude);
-        builder.Property(t => t.Description);
-        //builder.Property(t => t.OwnerId);
-        //builder.Property(t => t.InvitedUsersId);
+        
+        builder.HasKey(t => t.Id);
+        builder.Property(t => t.Name).IsRequired().HasMaxLength(20);
+        builder.Property(t => t.Latitude).IsRequired().HasMaxLength(40);
+        builder.Property(t => t.Longitude).IsRequired().HasMaxLength(40);
+        builder.Property(t => t.Description).IsRequired().HasMaxLength(50);
+        
     }
 }
