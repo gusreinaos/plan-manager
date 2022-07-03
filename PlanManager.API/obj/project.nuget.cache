@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "YZJU8gKANC8QroOFBo0EacIQdYjV8vG3VWa02TBCxS2AQTZU3nYJW7qMZqTblzWDRgzbU89p17XHkidTYfrbAA==",
+  "dgSpecHash": "UdMxPqx9g6lflRXp3DsJOQ9h5zPwsB+F6cGlWMUMrEps9L/TgQSi3YNQMBfpMzb+XJUBTlc0ajkHFyehrJWhRw==",
   "success": true,
   "projectFilePath": "/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.API/PlanManager.API.csproj",
   "expectedPackageFiles": [
     "/Users/oscarreinagustafsson/.nuget/packages/autofac/6.4.0/autofac.6.4.0.nupkg.sha512",
     "/Users/oscarreinagustafsson/.nuget/packages/autofac.extensions.dependencyinjection/8.0.0/autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "/Users/oscarreinagustafsson/.nuget/packages/fluentvalidation/11.1.0/fluentvalidation.11.1.0.nupkg.sha512",
     "/Users/oscarreinagustafsson/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/oscarreinagustafsson/.nuget/packages/mediatr/10.0.1/mediatr.10.0.1.nupkg.sha512",
     "/Users/oscarreinagustafsson/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",

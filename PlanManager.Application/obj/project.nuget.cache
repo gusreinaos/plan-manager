@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "rj09+Gx3U+TyEILH0QgjjaXe0BZVTvNIa0wqqrkOKAxleuPJPDohQ4LJpOFXoQmqKxi/CuK492OE52HgSlJzIg==",
+  "dgSpecHash": "5jSrQUMUnuD6B8A8VTt1mlKxQvpP05SX0oA9bBdU6HTsQY54YngQVD5EdgcMI7eescAnOctmlxwWLIa/VbRoVg==",
   "success": true,
   "projectFilePath": "/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Application/PlanManager.Application.csproj",
   "expectedPackageFiles": [
+    "/Users/oscarreinagustafsson/.nuget/packages/fluentvalidation/11.1.0/fluentvalidation.11.1.0.nupkg.sha512",
     "/Users/oscarreinagustafsson/.nuget/packages/mediatr/10.0.1/mediatr.10.0.1.nupkg.sha512",
     "/Users/oscarreinagustafsson/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
     "/Users/oscarreinagustafsson/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/10.0.1/mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",

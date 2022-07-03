@@ -26,13 +26,13 @@ public class WeatherForecastController : ControllerBase
     [HttpGet(Name = "GetWeatherForecast")]
     public async Task<IEnumerable<WeatherForecast>> Get()
     {
-        var plan = await _mediator.Send(new CreatePlanCommand("oscar2"));
+        var plan = await _mediator.Send(new CreatePlanCommand("oscar2", 40, -50, "pepe"));
         
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = plan.Name
+                Summary = ""
             })
             .ToArray();
     }

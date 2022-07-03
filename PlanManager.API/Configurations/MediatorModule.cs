@@ -1,7 +1,10 @@
 using System.Reflection;
 using Autofac;
+using FluentValidation;
 using MediatR;
 using PlanManager.Application.Commands.PlanCommands;
+using PlanManager.Application.Validators;
+using PlanManager.Infrastructure.Behaviours;
 
 namespace PlanManager.API.Configurations;
 
@@ -22,5 +25,13 @@ public class MediatorModule : Autofac.Module
                 return componentContext.TryResolve(t, out o) ? o : null;
             };
         });
+        
+        builder.RegisterGeneric(typeof(ValidatorBehaviour<,>)).As(typeof(IPipelineBehavior<,>));
+        
+        // Register the Command's Validators (Validators based on FluentValidation library)
+        builder
+            .RegisterAssemblyTypes(typeof(CreatePlanCommandValidator).GetTypeInfo().Assembly)
+            .Where(t => t.IsClosedTypeOf(typeof(IValidator<>)))
+            .AsImplementedInterfaces();
     }
 }

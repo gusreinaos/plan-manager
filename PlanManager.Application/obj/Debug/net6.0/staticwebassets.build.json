@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "F/JTidJwoaD7ITXCB5EmNx0B0h48DjD3Elx8G5S+e20=",
+  "Hash": "+DwIDxcAKBux/mgCKY1aR+6LDnf37Q3k6IJabmcgJo4=",
   "Source": "PlanManager.Application",
   "BasePath": "_content/PlanManager.Application",
   "Mode": "Default",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "PlanManager.Domain",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
     }
   ],
