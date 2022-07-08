@@ -7,17 +7,18 @@ namespace PlanManager.Application.Commands.PlanCommands;
 public class CreatePlanCommandHandler : IRequestHandler<CreatePlanCommand, Plan>
 {
 
-    private readonly IUserRepository _userRepository;
+    private readonly IPlanRepository _planRepository;
 
-    public CreatePlanCommandHandler(IUserRepository userRepository)
+    public CreatePlanCommandHandler(IPlanRepository planRepository)
     {
-        _userRepository = userRepository;
+        _planRepository = planRepository;
     }
 
     public async Task<Plan> Handle(CreatePlanCommand request, CancellationToken cancellationToken)
     {
-        var plan = _userRepository.GetUserById(Guid.Parse("aaf81b9a-0689-4d76-a61a-1660b490a2a0"));
-        //return new Plan(plan.Name + " " + request.Name);
-        return null;
+        var plan = new Plan(Guid.NewGuid(), request.Name, request.Longitude, request.Latitude, request.Description, request.UserId );
+        _planRepository.CreatePlan(plan);
+        _planRepository.Save();
+        return plan;
     }
 }
