@@ -26,7 +26,7 @@ public class WeatherForecastController : ControllerBase
     [HttpGet(Name = "GetWeatherForecast")]
     public async Task<IEnumerable<WeatherForecast>> Get()
     {
-        var plan = await _mediator.Send(new CreatePlanCommand("oscar2", 40, -50, "pepe"));
+        //var plan = await _mediator.Send(new CreatePlanCommand("oscar2", 40, -50, "pepe"));
         
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
