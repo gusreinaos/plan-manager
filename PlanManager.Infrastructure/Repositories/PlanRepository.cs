@@ -19,6 +19,10 @@ public class PlanRepository : IPlanRepository
         return _dbContext.Plans.ToList();
     }
 
+    public IEnumerable<Plan> GetPlanByUserId(Guid userId)
+    {
+        return _dbContext.Plans.Where(p => p.UserId.Equals(userId));
+    }
     public Plan? GetPlanById(Guid planId)
     {
         return _dbContext.Plans.Find(planId);
