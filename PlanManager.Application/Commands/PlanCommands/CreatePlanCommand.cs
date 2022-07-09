@@ -1,9 +1,10 @@
 using MediatR;
+using PlanManager.Application.DTOs.Responses;
 using PlanManager.Domain.Entities;
 
 namespace PlanManager.Application.Commands.PlanCommands;
 
-public class CreatePlanCommand : IRequest<Plan>
+public class CreatePlanCommand : IRequest<CreatePlanCommandResponse>
 {
     public Guid UserId { get; set; }
     public string Name { get; set; }

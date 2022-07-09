@@ -9,7 +9,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="DTOs" />
       <Folder Include="Events\Domain" />
       <Folder Include="Services" />
     </ItemGroup>
