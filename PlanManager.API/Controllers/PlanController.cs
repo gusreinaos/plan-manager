@@ -46,6 +46,8 @@ public class PlanController : ControllerBase
     */
     
     //Cada vez que creemos el caso de uso tenemos que especificar la accion http a la que se refiere
+    
+    
     [HttpPost]
     public async Task<CreatePlanCommandResponse> CreatePlan([FromBody] CreatePlanCommandRequest request)
     {
@@ -63,6 +65,17 @@ public class PlanController : ControllerBase
         var query = new ListPlanQueryRequest().ToApplication(userId);
         var response = await _mediator.Send(query);
         
+        return response;
+    }
+
+    [HttpDelete]
+    public async Task<DeletePlanCommandResponse> DeletePlan(DeletePlanCommandRequest request)
+    {
+
+        var planId = Guid.Parse("027a8160-937d-43e1-9949-fb8e1d2e9aa8");
+        var command = request.ToApplication(planId);
+        var response = await _mediator.Send(command);
+
         return response;
     }
 }

@@ -1,9 +1,10 @@
 using MediatR;
+using PlanManager.Application.DTOs.Responses.Commands;
 using PlanManager.Domain.Entities;
 
 namespace PlanManager.Application.Commands.PlanCommands;
 
-public class DeletePlanCommand : IRequest<Plan>
+public class DeletePlanCommand : IRequest<DeletePlanCommandResponse>
 {
     public Guid PlanId { get; set; }
     
