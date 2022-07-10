@@ -1,5 +1,6 @@
 using MediatR;
 using PlanManager.Application.DTOs.Responses;
+using PlanManager.Application.DTOs.Responses.Queries;
 using PlanManager.Application.Queries.PlanQueries;
 using PlanManager.Domain.Entities;
 using PlanManager.Domain.Interfaces;

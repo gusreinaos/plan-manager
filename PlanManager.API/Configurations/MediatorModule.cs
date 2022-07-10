@@ -4,6 +4,7 @@ using FluentValidation;
 using MediatR;
 using PlanManager.Application.Commands.PlanCommands;
 using PlanManager.Application.Validators;
+using PlanManager.Application.Validators.Commands;
 using PlanManager.Infrastructure.Behaviours;
 
 namespace PlanManager.API.Configurations;

@@ -2,7 +2,11 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using PlanManager.Application.Commands.PlanCommands;
 using PlanManager.Application.DTOs.Requests;
+using PlanManager.Application.DTOs.Requests.Commands;
+using PlanManager.Application.DTOs.Requests.Queries;
 using PlanManager.Application.DTOs.Responses;
+using PlanManager.Application.DTOs.Responses.Commands;
+using PlanManager.Application.DTOs.Responses.Queries;
 using PlanManager.Domain.Interfaces;
 
 namespace PlanManager.API.Controllers;

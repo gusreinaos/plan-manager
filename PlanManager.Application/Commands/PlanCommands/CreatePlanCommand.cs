@@ -1,5 +1,6 @@
 using MediatR;
 using PlanManager.Application.DTOs.Responses;
+using PlanManager.Application.DTOs.Responses.Commands;
 using PlanManager.Domain.Entities;
 
 namespace PlanManager.Application.Commands.PlanCommands;
