@@ -1,9 +1,10 @@
-# Título del Proyecto
+# Plan-Manager
 
-_Acá va un párrafo que describa lo que es el proyecto_
+Plan manager is a web application which makes it easy for our users to keep all plans in the same place, even from different categories, as well as invite your friends in a simple way.
 
-## Comenzando 🚀
+## Getting Started 🚀
 
+/*
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
 Mira **Deployment** para conocer como desplegar el proyecto.
@@ -91,3 +92,5 @@ También puedes mirar la lista de todos los [contribuyentes](https://github.com/
 ## Licencia 📄
 
 Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+
+*/
