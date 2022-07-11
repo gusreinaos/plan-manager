@@ -4,7 +4,7 @@ Plan manager is a web application which makes it easy for our users to keep all 
 
 ## Getting Started 🚀
 
-/*
+<!--
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
 Mira **Deployment** para conocer como desplegar el proyecto.
@@ -93,4 +93,4 @@ También puedes mirar la lista de todos los [contribuyentes](https://github.com/
 
 Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
 
-*/
+-->
