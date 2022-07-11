@@ -1,16 +1,17 @@
 using MediatR;
+using PlanManager.Application.DTOs.Requests.Commands;
+using PlanManager.Application.DTOs.Responses.Commands;
 using PlanManager.Domain.Entities;
 
 namespace PlanManager.Application.Commands.PlanCommands;
 
-public class EditPlanCommand : IRequest<Plan>
+public class EditPlanCommand : IRequest<EditPlanCommandResponse>
 {
-    public Guid PlanId { get; set; }
     public Plan Plan { get; set; }
-    
-    public EditPlanCommand(Guid planId, Plan plan)
+
+    public EditPlanCommand(Plan plan)
     {
-        PlanId = planId;
         Plan = plan;
     }
+    
 }

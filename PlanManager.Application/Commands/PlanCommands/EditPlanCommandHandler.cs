@@ -1,10 +1,11 @@
 using MediatR;
+using PlanManager.Application.DTOs.Responses.Commands;
 using PlanManager.Domain.Entities;
 using PlanManager.Domain.Interfaces;
 
 namespace PlanManager.Application.Commands.PlanCommands;
 
-public class EditPlanCommandHandler : IRequestHandler<EditPlanCommand, Plan>
+public class EditPlanCommandHandler : IRequestHandler<EditPlanCommand, EditPlanCommandResponse>
 {
     private readonly IPlanRepository _planRepository;
 
@@ -13,9 +14,9 @@ public class EditPlanCommandHandler : IRequestHandler<EditPlanCommand, Plan>
         _planRepository = planRepository;
     }
     
-    public async Task<Plan> Handle(EditPlanCommand request, CancellationToken cancellationToken)
+    public async Task<EditPlanCommandResponse> Handle(EditPlanCommand request, CancellationToken cancellationToken)
     {
-        var oldPlan = _planRepository.GetPlanById(request.PlanId);
+        var oldPlan = _planRepository.GetPlanById(request.Plan.Id);
         
         oldPlan.Name = request.Plan.Name;
         oldPlan.Description = request.Plan.Description;
@@ -25,6 +26,6 @@ public class EditPlanCommandHandler : IRequestHandler<EditPlanCommand, Plan>
         _planRepository.UpdatePlan(oldPlan);
         _planRepository.Save();
 
-        return oldPlan;
+        return new EditPlanCommandResponse(request.Plan.Name, request.Plan.Longitude, request.Plan.Latitude, request.Plan.Description);
     }
 }
