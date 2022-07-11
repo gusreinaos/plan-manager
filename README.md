@@ -1,6 +1,6 @@
 # Plan-Manager
 
-Plan manager is a web application which makes it easy for our users to keep all plans in the same place, even from different categories, as well as invite your friends in a simple way.
+Plan manager is a web application which makes it easy for our users to keep all plans in the same place, even from different categories, as well as invite  friends in a simple way and intuitive way.
 
 ## Getting Started 🚀
 
