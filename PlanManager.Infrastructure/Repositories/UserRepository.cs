@@ -11,8 +11,33 @@ public class UserRepository : IUserRepository
         _dbContext = dbContext;
     }
     //Interrogation to point out the return of a null value
-    public Plan? GetUserById(Guid id)
+    public User? GetUserById(Guid id)
     {
-        return _dbContext.Plans.Find(id);
+        return _dbContext.Users.Find(id);
+    }
+
+    public IEnumerable<User> GetUsers()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void CreateUser(User user)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void DeleteUser(User user)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void UpdateUser(User user)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Save()
+    {
+        throw new NotImplementedException();
     }
 }

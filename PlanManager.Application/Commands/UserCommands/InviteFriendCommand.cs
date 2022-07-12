@@ -2,10 +2,13 @@ using MediatR;
 using PlanManager.Application.DTOs.Responses.Commands;
 using PlanManager.Domain.Entities;
 
-namespace PlanManager.Application.Commands.FriendCommands;
+namespace PlanManager.Application.Commands.UserCommands;
 
 public class InviteFriendCommand : IRequest<InviteFriendCommandResponse>
 {
+    public Guid UserId { get; set; }
+    public Guid PlanId { get; set; }
+    public string FriendMail { get; set; }
     public InviteFriendCommand(Guid userId, Guid planId, string friendMail)
     {
         UserId = userId;
@@ -13,7 +16,5 @@ public class InviteFriendCommand : IRequest<InviteFriendCommandResponse>
         FriendMail = friendMail;
     }
 
-    public Guid UserId { get; set; }
-    public Guid PlanId { get; set; }
-    public string FriendMail { get; set; }
+    
 }

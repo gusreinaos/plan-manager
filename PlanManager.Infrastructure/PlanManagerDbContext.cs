@@ -8,7 +8,7 @@ namespace PlanManager.Infrastructure;
 public class PlanManagerDbContext : DbContext
 {
     public DbSet<Plan> Plans { get; set; }
-    public DbSet<User> Users { get; set; }
+    public DbSet<User?> Users { get; set; }
     public DbSet<UserAttendsPlan> UserAttendsPlan { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
