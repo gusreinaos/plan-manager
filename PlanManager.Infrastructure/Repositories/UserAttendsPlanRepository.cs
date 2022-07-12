@@ -12,9 +12,14 @@ public class UserAttendsPlanRepository : IUserAttendsPlanRepository
         _dbContext = dbContext;
     }
     
-    public IEnumerable<UserAttendsPlan> GetUserAttendsPlanById()
+    public UserAttendsPlan GetUserAttendsPlanById()
     {
         throw new NotImplementedException();
+    }
+
+    public UserAttendsPlan GetUserAttendsPlanByPlanId(Guid planId)
+    {
+        return _dbContext.UserAttendsPlan.Find(planId);
     }
 
     public void CreateUserAttendsPlan(UserAttendsPlan userAttendsPlan)

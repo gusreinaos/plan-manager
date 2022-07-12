@@ -47,7 +47,6 @@ public class PlanController : ControllerBase
     
     //Cada vez que creemos el caso de uso tenemos que especificar la accion http a la que se refiere
     
-    
     [HttpPost]
     public async Task<CreatePlanCommandResponse> CreatePlan([FromBody] CreatePlanCommandRequest request)
     {

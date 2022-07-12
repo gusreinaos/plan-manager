@@ -8,12 +8,12 @@ public class InviteFriendCommand : IRequest<InviteFriendCommandResponse>
 {
     public Guid UserId { get; set; }
     public Guid PlanId { get; set; }
-    public string FriendMail { get; set; }
-    public InviteFriendCommand(Guid userId, Guid planId, string friendMail)
+    public string FriendId { get; set; }
+    public InviteFriendCommand(Guid userId, Guid planId, string friendId)
     {
         UserId = userId;
         PlanId = planId;
-        FriendMail = friendMail;
+        FriendId = friendId;
     }
 
     
