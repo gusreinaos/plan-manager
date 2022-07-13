@@ -4,10 +4,10 @@ namespace PlanManager.Application.DTOs.Responses.Commands;
 
 public class InviteFriendCommandResponse
 {
-    public List<UserAttendsPlan> UserAttendsPlan { get; set; }
+    public string FriendEmail { get; set; }
     
-    public InviteFriendCommandResponse(List<UserAttendsPlan> userAttendsPlan)
+    public InviteFriendCommandResponse(string friendEmail)
     {
-        UserAttendsPlan = userAttendsPlan;
+        FriendEmail = friendEmail;
     }
 }

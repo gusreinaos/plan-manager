@@ -17,6 +17,10 @@ public class RepositoriesModule : Autofac.Module
         builder.RegisterType<PlanRepository>()
             .As<IPlanRepository>()
             .InstancePerLifetimeScope();
+        
+        builder.RegisterType<UserAttendsPlanRepository>()
+            .As<IUserAttendsPlanRepository>()
+            .InstancePerLifetimeScope();
 
         builder.RegisterType<PlanManagerDbContext>().AsSelf();
 
