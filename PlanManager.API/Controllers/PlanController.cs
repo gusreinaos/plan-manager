@@ -1,13 +1,9 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using PlanManager.Application.Commands.PlanCommands;
-using PlanManager.Application.DTOs.Requests;
 using PlanManager.Application.DTOs.Requests.Commands;
 using PlanManager.Application.DTOs.Requests.Queries;
-using PlanManager.Application.DTOs.Responses;
 using PlanManager.Application.DTOs.Responses.Commands;
 using PlanManager.Application.DTOs.Responses.Queries;
-using PlanManager.Domain.Interfaces;
 
 namespace PlanManager.API.Controllers;
 
@@ -48,10 +44,11 @@ public class PlanController : ControllerBase
     //Cada vez que creemos el caso de uso tenemos que especificar la accion http a la que se refiere
     
     [HttpPost]
-    public async Task<CreatePlanCommandResponse> CreatePlan([FromBody] CreatePlanCommandRequest request)
+    public async Task<InviteFriendCommandResponse> CreatePlan([FromBody] InviteFriendCommandRequest request)
     {
-        var userId = Guid.Parse("b5ad7569-b94b-4808-99cd-cb2f3cab0e3a");
-        var command = request.ToApplication(userId);
+        var userId = Guid.Parse("5da8c826-cb6e-4e1a-bb0a-d4ff136c7181");
+        var planId = Guid.Parse("ec30500f-f7c8-4ee4-9f13-ebb7ee7ffbe2");
+        var command = request.ToApplication(userId, planId);
         var response = await _mediator.Send(command);
 
         return response;

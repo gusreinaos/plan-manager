@@ -16,6 +16,11 @@ public class UserRepository : IUserRepository
         return _dbContext.Users.Find(id);
     }
 
+    public User? GetUserByMail(string mail)
+    {
+        return _dbContext.Users.Find(mail);
+    }
+
     public IEnumerable<User> GetUsers()
     {
         throw new NotImplementedException();

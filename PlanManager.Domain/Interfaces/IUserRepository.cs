@@ -5,6 +5,7 @@ namespace PlanManager.Domain.Interfaces;
 public interface IUserRepository
 {
     public User? GetUserById(Guid id);
+    public User? GetUserByMail(string mail);
     public IEnumerable<User> GetUsers();
     public void CreateUser(User user);
     public void DeleteUser(User user);
