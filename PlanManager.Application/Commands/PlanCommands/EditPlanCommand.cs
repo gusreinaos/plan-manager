@@ -7,11 +7,21 @@ namespace PlanManager.Application.Commands.PlanCommands;
 
 public class EditPlanCommand : IRequest<EditPlanCommandResponse>
 {
-    public Plan Plan { get; set; }
 
-    public EditPlanCommand(Plan plan)
+    public Guid  Id { get; set; }
+    public string Name { get; set; }
+    public double Longitude { get; set; }
+    public double Latitude { get; set; }
+    public string Description { get; set; }
+    public Guid UserId { get; set; }
+
+    public EditPlanCommand(Guid id, string name, double longitude, double latitude, string description, Guid userId)
     {
-        Plan = plan;
+        Id = id;
+        Name = name;
+        Longitude = longitude;
+        Latitude = latitude;
+        Description = description;
+        UserId = userId;
     }
-    
 }

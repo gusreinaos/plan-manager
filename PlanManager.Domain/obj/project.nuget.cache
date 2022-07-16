@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "yrrGybpFH6oW8QHlRwnG1+6AXb94dhW6K7o6ADR+FsevvDZtm3yKkOsag2JN/G4Z3GC+t6qxqi3+ttNQBn4+gw==",
+  "dgSpecHash": "+4CelyRC8zKRNVs0VNibp0K6Mu1wKNNVnvmYieEhSwXhJGJYBWv3N098cVRcgtkhLTqRLMP80oua9t5Iu1c0LA==",
   "success": true,
   "projectFilePath": "/Users/oscarreinagustafsson/Desktop/plan-manager/plan-manager/PlanManager.Domain/PlanManager.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/oscarreinagustafsson/.nuget/packages/mediatr/10.0.1/mediatr.10.0.1.nupkg.sha512",
+    "/Users/oscarreinagustafsson/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -12,15 +12,16 @@ public class UserAttendsPlanRepository : IUserAttendsPlanRepository
         _dbContext = dbContext;
     }
     
-    public UserAttendsPlan GetUserAttendsPlanById()
+    public UserAttendsPlan GetUserAttendsPlanById(int Id)
     {
         throw new NotImplementedException();
     }
 
-    public UserAttendsPlan GetUserAttendsPlanByPlanId(Guid planId)
+    public UserAttendsPlan? GetUserAttendsPlanByUserIdAndPlanId(Guid userId, Guid planId)
     {
-        return _dbContext.UserAttendsPlan.Find(planId);
+        return _dbContext.UserAttendsPlan.FirstOrDefault(x => x.UserId.Equals(userId) && x.PlanId.Equals(planId));
     }
+
 
     public void CreateUserAttendsPlan(UserAttendsPlan userAttendsPlan)
     {

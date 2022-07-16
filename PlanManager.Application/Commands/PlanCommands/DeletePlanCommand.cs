@@ -6,10 +6,12 @@ namespace PlanManager.Application.Commands.PlanCommands;
 
 public class DeletePlanCommand : IRequest<DeletePlanCommandResponse>
 {
-    public Guid PlanId { get; set; }
+    public Guid Id { get; set; }
+    public Guid UserId { get; set; }
     
-    public DeletePlanCommand(Guid planId)
+    public DeletePlanCommand(Guid id, Guid userId)
     {
-        PlanId = planId;
+        Id = id;
+        UserId = userId;
     }
 }

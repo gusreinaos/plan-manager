@@ -433,6 +433,10 @@
       "PlanManager.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "MediatR": "10.0.1",
+          "MediatR.Contracts": "1.0.1"
+        },
         "compile": {
           "bin/placeholder/PlanManager.Domain.dll": {}
         },

@@ -4,8 +4,8 @@ namespace PlanManager.Domain.Interfaces;
 
 public interface IUserAttendsPlanRepository
 {
-    public UserAttendsPlan GetUserAttendsPlanById();
-    public UserAttendsPlan GetUserAttendsPlanByPlanId(Guid planId);
+    public UserAttendsPlan GetUserAttendsPlanById(int Id);
+    public UserAttendsPlan? GetUserAttendsPlanByUserIdAndPlanId(Guid userId, Guid planId);
     public void CreateUserAttendsPlan(UserAttendsPlan userAttendsPlan);
     public void DeleteUserAttendsPlan(int userAttendsPlanId);
     public void UpdateUserAttendsPlan(UserAttendsPlan userAttendsPlan);
