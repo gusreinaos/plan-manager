@@ -5,6 +5,7 @@ using MediatR;
 using PlanManager.Application.Commands.PlanCommands;
 using PlanManager.Application.Validators;
 using PlanManager.Application.Validators.Commands;
+using PlanManager.Domain.Services.Validations;
 using PlanManager.Infrastructure.Behaviours;
 
 namespace PlanManager.API.Configurations;
@@ -16,6 +17,9 @@ public class MediatorModule : Autofac.Module
         builder.RegisterAssemblyTypes(typeof(IMediator).GetTypeInfo().Assembly).AsImplementedInterfaces();
         // Registrar todas las clases command que  implementen el IRequestHandler
         builder.RegisterAssemblyTypes(typeof(CreatePlanCommand).GetTypeInfo().Assembly).AsClosedTypesOf(typeof(IRequestHandler<,>));
+        
+        //Registar todas las clases services del domain
+        builder.RegisterAssemblyTypes(typeof(ValidateUserService).GetTypeInfo().Assembly).AsClosedTypesOf(typeof(IRequestHandler<,>));
         
         builder.Register<ServiceFactory>(context =>
         {

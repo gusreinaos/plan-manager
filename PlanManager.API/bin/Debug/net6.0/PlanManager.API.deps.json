@@ -289,6 +289,10 @@
         }
       },
       "PlanManager.Domain/1.0.0": {
+        "dependencies": {
+          "MediatR": "10.0.1",
+          "MediatR.Contracts": "1.0.1"
+        },
         "runtime": {
           "PlanManager.Domain.dll": {}
         }

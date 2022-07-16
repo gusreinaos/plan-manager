@@ -10,7 +10,11 @@
 
     <ItemGroup>
       <Folder Include="Events\Domain" />
-      <Folder Include="Services" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR" Version="10.0.1" />
+      <PackageReference Include="MediatR.Contracts" Version="1.0.1" />
     </ItemGroup>
 
 </Project>
