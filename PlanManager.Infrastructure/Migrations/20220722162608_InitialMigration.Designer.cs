@@ -12,7 +12,7 @@ using PlanManager.Infrastructure;
 namespace PlanManager.Infrastructure.Migrations
 {
     [DbContext(typeof(PlanManagerDbContext))]
-    [Migration("20220702153326_InitialMigration")]
+    [Migration("20220722162608_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -91,6 +91,10 @@ namespace PlanManager.Infrastructure.Migrations
 
                     b.Property<Guid>("PlanId")
                         .HasColumnType("uuid");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uuid");

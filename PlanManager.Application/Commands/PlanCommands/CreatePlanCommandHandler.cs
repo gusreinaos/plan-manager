@@ -1,6 +1,7 @@
 using MediatR;
 using PlanManager.Application.DTOs.Responses;
 using PlanManager.Application.DTOs.Responses.Commands;
+using PlanManager.Domain.Constants;
 using PlanManager.Domain.Entities;
 using PlanManager.Domain.Interfaces;
 using PlanManager.Domain.Services.Validations;
@@ -36,7 +37,7 @@ public class CreatePlanCommandHandler : IRequestHandler<CreatePlanCommand, Creat
         _planRepository.Save();
 
         //Creation of the association of the user to the plan
-        var userAttendsPlan = new UserAttendsPlan(new int(), request.UserId, plan.Id);
+        var userAttendsPlan = new UserAttendsPlan(new int(), request.UserId, plan.Id, UserAttendsPlanStatus.Accepted);
         _userAttendsPlanRepository.CreateUserAttendsPlan(userAttendsPlan);
         _userAttendsPlanRepository.Save();
         

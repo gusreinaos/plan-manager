@@ -1,5 +1,6 @@
 using MediatR;
 using PlanManager.Application.DTOs.Responses.Commands;
+using PlanManager.Domain.Constants;
 using PlanManager.Domain.Entities;
 using PlanManager.Domain.Interfaces;
 using PlanManager.Domain.Services.Validations;
@@ -41,7 +42,7 @@ public class InviteFriendCommandHandler : IRequestHandler<InviteFriendCommand, I
         
         var friend = _userRepository.GetUserById(request.UserId);
 
-        var userAttendsPlan = new UserAttendsPlan(new int(), request.UserId, request.PlanId);
+        var userAttendsPlan = new UserAttendsPlan(new int(), request.UserId, request.PlanId, UserAttendsPlanStatus.Tentative);
         
         _userAttendsPlanRepository.CreateUserAttendsPlan(userAttendsPlan);
         _userAttendsPlanRepository.Save();
