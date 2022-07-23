@@ -39,7 +39,7 @@ public class RejectPlanCommandHandler : IRequestHandler<RejectPlanCommand, Rejec
         }
         
         var userAttendsPlan = _userAttendsPlanRepository.GetUserAttendsPlanByUserIdAndPlanId(request.UserId, request.PlanId);
-        userAttendsPlan.Status = UserAttendsPlanStatus.Accepted;
+        userAttendsPlan.Status = UserAttendsPlanStatus.Rejected;
         _userAttendsPlanRepository.UpdateUserAttendsPlan(userAttendsPlan);
         
         return new RejectPlanCommandResponse(request.PlanId);
