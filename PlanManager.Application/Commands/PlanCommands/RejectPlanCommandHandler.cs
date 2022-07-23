@@ -33,7 +33,7 @@ public class RejectPlanCommandHandler : IRequestHandler<RejectPlanCommand, Rejec
         }
         
         var userInvited = await _mediator.Send(new ValidateUserAttendsPlanService(request.PlanId, request.UserId));
-        if (userInvited)
+        if (!userInvited)
         {
             throw new Exception("You cannot accept a plan you are not invited to");
         }
@@ -41,6 +41,7 @@ public class RejectPlanCommandHandler : IRequestHandler<RejectPlanCommand, Rejec
         var userAttendsPlan = _userAttendsPlanRepository.GetUserAttendsPlanByUserIdAndPlanId(request.UserId, request.PlanId);
         userAttendsPlan.Status = UserAttendsPlanStatus.Rejected;
         _userAttendsPlanRepository.UpdateUserAttendsPlan(userAttendsPlan);
+        _userAttendsPlanRepository.Save();
         
         return new RejectPlanCommandResponse(request.PlanId);
     }

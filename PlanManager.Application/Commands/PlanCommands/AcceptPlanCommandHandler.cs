@@ -44,6 +44,7 @@ public class AcceptPlanCommandHandler : IRequestHandler<AcceptPlanCommand, Accep
         var userAttendsPlan = _userAttendsPlanRepository.GetUserAttendsPlanByUserIdAndPlanId(request.UserId, request.PlanId);
         userAttendsPlan.Status = UserAttendsPlanStatus.Accepted;
         _userAttendsPlanRepository.UpdateUserAttendsPlan(userAttendsPlan);
+        _userAttendsPlanRepository.Save();
         
         return new AcceptPlanCommandResponse(request.PlanId);
     }

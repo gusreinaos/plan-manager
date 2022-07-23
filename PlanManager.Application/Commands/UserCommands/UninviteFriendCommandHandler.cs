@@ -43,6 +43,7 @@ public class UninviteFriendCommandHandler : IRequestHandler<UninviteFriendComman
         
         var userAttendsPlan = _userAttendsPlanRepository.GetUserAttendsPlanByUserIdAndPlanId(request.UserId, request.PlanId);
         _userAttendsPlanRepository.DeleteUserAttendsPlan(userAttendsPlan.Id);
+        _userAttendsPlanRepository.Save();
 
         var friend = _userRepository.GetUserById(request.UserId);
         
