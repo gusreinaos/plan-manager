@@ -6,23 +6,20 @@ using PlanManager.Domain.Services.Validations;
 
 namespace PlanManager.Application.Commands.PlanCommands;
 
-public class AcceptPlanCommandHandler : IRequestHandler<AcceptPlanCommand, AcceptPlanCommandResponse>
+public class RejectPlanCommandHandler : IRequestHandler<RejectPlanCommand, RejectPlanCommandResponse>
 {
-
     private readonly IMediator _mediator;
     private readonly IUserAttendsPlanRepository _userAttendsPlanRepository;
-    private readonly IPlanRepository _planRepository;
 
-    public AcceptPlanCommandHandler(IMediator mediator, IUserAttendsPlanRepository userAttendsPlanRepository, IPlanRepository planRepository)
+    public RejectPlanCommandHandler(IMediator mediator, IUserAttendsPlanRepository userAttendsPlanRepository)
     {
         _mediator = mediator;
         _userAttendsPlanRepository = userAttendsPlanRepository;
-        _planRepository = planRepository;
     }
-
-    public async Task<AcceptPlanCommandResponse> Handle(AcceptPlanCommand request, CancellationToken cancellationToken)
+    
+    
+    public async Task<RejectPlanCommandResponse> Handle(RejectPlanCommand request, CancellationToken cancellationToken)
     {
-
         var userExists = await _mediator.Send(new ValidateUserService(request.UserId));
         if (!userExists)
         {
@@ -45,6 +42,6 @@ public class AcceptPlanCommandHandler : IRequestHandler<AcceptPlanCommand, Accep
         userAttendsPlan.Status = UserAttendsPlanStatus.Accepted;
         _userAttendsPlanRepository.UpdateUserAttendsPlan(userAttendsPlan);
         
-        return new AcceptPlanCommandResponse(request.PlanId);
+        return new RejectPlanCommandResponse(request.PlanId);
     }
 }
