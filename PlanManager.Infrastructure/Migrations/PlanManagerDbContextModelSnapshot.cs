@@ -90,6 +90,10 @@ namespace PlanManager.Infrastructure.Migrations
                     b.Property<Guid>("PlanId")
                         .HasColumnType("uuid");
 
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<Guid>("UserId")
                         .HasColumnType("uuid");
 

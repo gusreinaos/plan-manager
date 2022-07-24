@@ -1,28 +1,25 @@
 using MediatR;
 using PlanManager.Application.DTOs.Responses.Commands;
+using PlanManager.Domain.Constants;
 using PlanManager.Domain.Interfaces;
 using PlanManager.Domain.Services.Validations;
 
-namespace PlanManager.Application.Commands.UserCommands;
+namespace PlanManager.Application.Commands.PlanCommands;
 
-public class UninviteFriendCommandHandler : IRequestHandler<UninviteFriendCommand, UninviteFriendCommandResponse>
+public class RejectPlanCommandHandler : IRequestHandler<RejectPlanCommand, RejectPlanCommandResponse>
 {
-
-    private readonly IUserAttendsPlanRepository _userAttendsPlanRepository;
-    private readonly IUserRepository _userRepository;
     private readonly IMediator _mediator;
+    private readonly IUserAttendsPlanRepository _userAttendsPlanRepository;
 
-    public UninviteFriendCommandHandler(IUserAttendsPlanRepository userAttendsPlanRepository, IUserRepository userRepository, IMediator mediator)
+    public RejectPlanCommandHandler(IMediator mediator, IUserAttendsPlanRepository userAttendsPlanRepository)
     {
-        _userAttendsPlanRepository = userAttendsPlanRepository;
-        _userRepository = userRepository;
         _mediator = mediator;
+        _userAttendsPlanRepository = userAttendsPlanRepository;
     }
     
     
-    public async Task<UninviteFriendCommandResponse> Handle(UninviteFriendCommand request, CancellationToken cancellationToken)
+    public async Task<RejectPlanCommandResponse> Handle(RejectPlanCommand request, CancellationToken cancellationToken)
     {
-        
         var userExists = await _mediator.Send(new ValidateUserService(request.UserId));
         if (!userExists)
         {
@@ -38,16 +35,14 @@ public class UninviteFriendCommandHandler : IRequestHandler<UninviteFriendComman
         var userInvited = await _mediator.Send(new ValidateUserAttendsPlanService(request.PlanId, request.UserId));
         if (!userInvited)
         {
-            throw new Exception("User with Id " + request.UserId + " is not invited to plan " + request.PlanId);
+            throw new Exception("You cannot accept a plan you are not invited to");
         }
         
         var userAttendsPlan = _userAttendsPlanRepository.GetUserAttendsPlanByUserIdAndPlanId(request.UserId, request.PlanId);
-        _userAttendsPlanRepository.DeleteUserAttendsPlan(userAttendsPlan.Id);
+        userAttendsPlan.Status = UserAttendsPlanStatus.Rejected;
+        _userAttendsPlanRepository.UpdateUserAttendsPlan(userAttendsPlan);
         _userAttendsPlanRepository.Save();
-
-        var friend = _userRepository.GetUserById(request.UserId);
         
-        
-        return new UninviteFriendCommandResponse(friend.Email);
+        return new RejectPlanCommandResponse(request.PlanId);
     }
 }
