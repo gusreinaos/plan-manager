@@ -13,7 +13,7 @@ cd plan-manager
 
 ## Technologies Used 📖
 
-For this project 
+This project has been developed with a hexagonal architecture referring to the SOLID principles as well as with the use of various design patterns, such as the cqs (command query separation) principle, repository pattern and mediator. In addition, I have used several other tools, among which I highlight Autofac, which is responsible for maintaining the injection of dependencies in the program.
 
 
 <!--
