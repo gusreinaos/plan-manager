@@ -4,6 +4,18 @@ Plan manager is a web application which makes it easy for our users to keep all 
 
 ## Getting Started 🚀
 
+For starting using the service please type the commands below in your terminal:
+```
+git clone https://github.com/gusreinaos/plan-manager.git
+cd plan-manager 
+
+```
+
+## Technologies Used 📖
+
+For this project 
+
+
 <!--
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
@@ -72,7 +84,7 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 
 Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
 
-## Wiki 📖
+## Wiki 
 
 Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
 
