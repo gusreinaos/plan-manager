@@ -2,6 +2,11 @@
 
 Plan manager is a web application which makes it easy for our users to keep all plans in the same place, even from different categories, as well as invite  friends in a simple way and intuitive way.
 
+## Pre-Requirements 🛠
+
+There are some technical requirements that need to be taken into consideration before having full access to the program´s functionality.
+
+
 ## Getting Started 🚀
 
 For starting using the service please type the commands below in your terminal:
