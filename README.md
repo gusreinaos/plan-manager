@@ -13,7 +13,7 @@ cd plan-manager
 
 ## Technologies Used 👨‍💻
 
-This project has been developed with a **hexagonal architecture** referring to the **SOLID principles** as well as with the use of various design patterns.
+This project has been developed with a **Hexagonal Architecture** referring to the **SOLID principles** as well as with the use of various design patterns.
 
 Design patterns are formalized best practices that the programmer can use to solve common problems when designing an application or system.
 
