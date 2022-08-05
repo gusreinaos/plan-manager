@@ -2,12 +2,12 @@
 
 Plan manager is a web application which makes it easy for our users to keep all plans in the same place, even from different categories, as well as invite  friends in a simple way and intuitive way.
 
-## Pre-Requirements 🛠
+## 🛠 Pre-Requirements 
 
 There are some technical requirements that need to be taken into consideration before having full access to the program´s functionality.
 
 
-## Getting Started 🚀
+## 🚀 Getting Started 
 
 For starting using the service please type the commands below in your terminal:
 ```
@@ -16,7 +16,7 @@ cd plan-manager
 
 ```
 
-## Technologies Used 👨‍💻
+## 👨‍💻 Technologies Used 
 
 This project has been developed with a **Hexagonal Architecture** referring to the **SOLID principles** as well as with the use of various design patterns.
 
@@ -33,7 +33,7 @@ The most important ones I can highlight would be:
 
 In addition, I have used several other tools, among which I highlight **Autofac**, which is responsible for maintaining the **injection of dependencies** in the program.
 
-## User Manual 📖
+## 📖 User Manual 
 
 <!--
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
