@@ -5,7 +5,7 @@ Plan manager is a web application which makes it easy for our users to keep all 
 ## 🛠 Pre-Requirements 
 
 There are some technical requirements that need to be taken into consideration before having full access to the program´s functionality.
-- Install an IDE for C# (recommending [Visual Studio](https://visualstudio.microsoft.com/) or [Rider](https://www.jetbrains.com/rider/) among others)
+- Install a suitable IDE for C# (recommending [Visual Studio](https://visualstudio.microsoft.com/) or [Rider](https://www.jetbrains.com/rider/) among others)
 - Install SDK for .NET since we are using its framework
 - Install [Entity Framework](https://docs.microsoft.com/en-us/ef/) (.NET object-database mapper)
 - Install [Docker](https://www.docker.com/) (technology for creating images as code such as .dockerfile)
