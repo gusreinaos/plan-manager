@@ -5,11 +5,11 @@ Plan manager is a web application which makes it easy for our users to keep all 
 ## 🛠 Pre-Requirements 
 
 There are some technical requirements that need to be taken into consideration before having full access to the program´s functionality.
-- IDE for C#
-- Install SDK for .NET
-- Install Entity Framework (EF)
-- Install Docker (technology for creating images as code such as .dockerfile)
-- Install Docker Compose (technology for building up several dockers through the file docker-compose.yml)
+- Install an IDE for C# (recommending [Visual Studio](https://visualstudio.microsoft.com/) or [Rider](https://www.jetbrains.com/rider/) among others)
+- Install SDK for .NET since we are using its framework
+- Install [Entity Framework](https://docs.microsoft.com/en-us/ef/) (.NET object-database mapper)
+- Install [Docker](https://www.docker.com/) (technology for creating images as code such as .dockerfile)
+- Install [Docker Compose](https://docs.docker.com/compose/gettingstarted/) (technology for building up several dockers through the file docker-compose.yml)
 
 ## 🚀 Getting Started 
 
@@ -43,4 +43,4 @@ We also used Swagger in order to keep the documentation of the API
 
 ## 📖 User Manual 
 
-Once the dotnet run has been executed, podras acceder a la siguiente ruta (https://localhost:7265/swagger/index.html) en el navegador para poder hacer uso del API mediante Swagger con las diferentes funciones HTTP.
+Once the dotnet run has been executed, you will be able to access the following route https://localhost:7265/swagger/index.html in your browser from which via [Swagger](https://swagger.io/) you will be able to use the API with its several HTTP functionalities.
