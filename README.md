@@ -37,9 +37,7 @@ The most important ones I can highlight would be:
 - **Mediator** pattern which defines an object that encapsulates how a set of objects interact between layers
 - **DTO** pattern (where DTOs are classes which control the flow of information and reduce the number of method calls)
 
-In addition, I have used several other tools, among which I highlight **Autofac**, which is responsible for maintaining the **injection of dependencies** in the program.
-
-We also used Swagger in order to keep the documentation of the API
+In addition, I have used several other tools, among which I highlight **Autofac**, which is responsible for maintaining the **injection of dependencies** in the program and **Swagger**, which keeps the documentation of the API.
 
 ## 📖 User Manual 
 
